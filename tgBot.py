@@ -4,6 +4,8 @@ import requests
 import json
 import random
 
+
+BOT_USERNAME = '@ShrekEnjoyers_bot'
 TOKEN = None
 with open("token.txt") as f:
     TOKEN = f.read().strip()
@@ -100,12 +102,11 @@ async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == '__main__':
     print('Starting bot...')
-    app = Application.builder().token(API_TOKEN).build()
+    app = Application.builder().token(TOKEN).build()
 
     # Commands
     # app.add_handler(CommandHandler('start', start_command))
-    # app.add_handler(CommandHandler('help', help_command))
-    # app.add_handler(CommandHandler('custom', custom_command))
+    # app.add_handler(CommandHandler('help', help_command))    # app.add_handler(CommandHandler('custom', custom_command))
     app.add_handler(CommandHandler('compliment', compliment_command))
     app.add_handler(CommandHandler('insult', insult_command))
     app.add_handler(CommandHandler('facts', uselessFacts_command))
