@@ -4,9 +4,9 @@ import requests
 import json
 import random
 
-# Replace 'YOUR_API_TOKEN' with the token you received from BotFather
-API_TOKEN = "6007420150:AAE2cCCHKSARPtcLoA3sWOBjMfq45Sam_pw"
-BOT_USERNAME = '@ShrekEnjoyers_bot'
+TOKEN = None
+with open("token.txt") as f:
+    TOKEN = f.read().strip()
 
 with open('quotes.json', encoding='utf-8') as f:
     data = json.load(f)
