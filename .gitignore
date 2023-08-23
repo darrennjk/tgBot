@@ -4,3 +4,5 @@
 .idea/*
 # This is where BOT_TOKEN is stored
 .env
+# This is for python virtual environment cache
+telegram/__pycache__
