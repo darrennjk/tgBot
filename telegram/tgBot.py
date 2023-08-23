@@ -14,7 +14,7 @@ from constants import *
 BOT_USERNAME = '@ShrekEnjoyers_bot'
 
 load_dotenv()
-TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 with open('quotes.json', encoding='utf-8') as f:
     data = json.load(f)
@@ -113,7 +113,7 @@ async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == '__main__':
     print('Starting bot...')
-    app = Application.builder().token(TOKEN).build()
+    app = Application.builder().token(BOT_TOKEN).build()
 
     # Commands
     # app.add_handler(CommandHandler('start', start_command))
