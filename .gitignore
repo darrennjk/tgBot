@@ -1,1 +1,6 @@
-TOKEN.txt
+# Ignore everything in this directory
+
+# This is for IDE
+.idea/*
+# This is where BOT_TOKEN is stored
+.env
