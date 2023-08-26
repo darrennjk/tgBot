@@ -47,6 +47,6 @@ def send_message_telegram(message: str, id: str):
     
     
 # Clement's SHIT
-send_message_telegram("penis hehe, deez nuts", CLEM_USER_ID)
+# send_message_telegram("penis hehe, deez nuts", CLEM_USER_ID)
 # send_message_telegram("penis hehe, deez nuts", DARR_USER_ID)
 # send_message_telegram("penis hehe, deez nuts", DENZ_USER_ID)
