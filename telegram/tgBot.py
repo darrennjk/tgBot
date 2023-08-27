@@ -16,7 +16,7 @@ BOT_USERNAME = '@ShrekEnjoyers_bot'
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-with open('quotes.json', encoding='utf-8') as f:
+with open('mquotes/quotes.json', encoding='utf-8') as f:
     data = json.load(f)
 
 
