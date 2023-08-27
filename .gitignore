@@ -1245,3 +1245,4 @@ telegram/__pycache__
 # For venv
 .venv
 venv/
+tgbotenv/
