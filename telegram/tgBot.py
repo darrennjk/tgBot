@@ -5,6 +5,7 @@ import requests
 import json
 import random
 import os
+import signal
 from dotenv import load_dotenv
 
 # Importing local files
@@ -18,7 +19,6 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 with open('mquotes/quotes.json', encoding='utf-8') as f:
     data = json.load(f)
-
 
 
 # Clement's SHIT
@@ -111,6 +111,12 @@ async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(f'Update {update} caused error {context.error}')
 
 
+def handle_shutdown(signal, frame):
+    print("Shutting down bot...")
+    send_shutdown_message()
+    exit(0)
+
+
 if __name__ == '__main__':
     print('Starting bot...')
     app = Application.builder().token(BOT_TOKEN).build()
@@ -128,6 +134,9 @@ if __name__ == '__main__':
 
     # Errors
     app.add_error_handler(error)
+
+    # Register the shutdown handler for Ctrl+C
+    signal.signal(signal.SIGINT, handle_shutdown)
 
     # Polls the bot
     print('Polling...')

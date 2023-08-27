@@ -46,7 +46,10 @@ def send_message_telegram(message: str, id: str):
 
     # For debugging purposes
     # print(response.text)
-    
-    
-# Clement's SHIT
-# send_message_telegram("i love nuts even more", DSAI_GROUP_ID)
+
+
+def send_shutdown_message():
+    # Commented out to reduce spam
+    # send_message_telegram("I am shutting down, gdnite babes!", DSAI_GROUP_ID)
+    pass
+
