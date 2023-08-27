@@ -1,7 +1,9 @@
+# Importing libraries
 import requests
 import os
 from dotenv import load_dotenv
 
+# Importing local files
 from constants import *
 
 
@@ -47,6 +49,4 @@ def send_message_telegram(message: str, id: str):
     
     
 # Clement's SHIT
-# send_message_telegram("penis hehe, deez nuts", CLEM_USER_ID)
-# send_message_telegram("penis hehe, deez nuts", DARR_USER_ID)
-# send_message_telegram("penis hehe, deez nuts", DENZ_USER_ID)
+# send_message_telegram("i love nuts even more", DSAI_GROUP_ID)

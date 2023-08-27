@@ -22,10 +22,10 @@ with open('mquotes/quotes.json', encoding='utf-8') as f:
 
 
 # Clement's SHIT
-# send_message_telegram("penis hehe, deez nuts", CLEM_USER_ID)
-# send_message_telegram("penis hehe, deez nuts", DARR_USER_ID)
-# send_message_telegram("penis hehe, deez nuts", DENZ_USER_ID)
-
+# send_message_telegram("lover of deez nuts", CLEM_USER_ID)
+# send_message_telegram("darren enjoys deez nuts a lot", DARR_USER_ID)
+# send_message_telegram("denzyl has a deez nuts addiction", DENZ_USER_ID)
+# send_message_telegram("i love nuts", DSAI_GROUP_ID)
 
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
