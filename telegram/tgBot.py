@@ -76,6 +76,12 @@ async def motivation_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
     await update.message.reply_text(motivation)
 
 
+async def pickup_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    response = requests.get("https://vinuxd.vercel.app/api/pickup")
+    pickup_line = response.json()['pickup']
+    await update.message.reply_text(pickup_line)
+
+
 def handle_response(text: str) -> str:
     processed: str = text.lower()
     if 'hello' in processed:
@@ -83,8 +89,6 @@ def handle_response(text: str) -> str:
 
     if 'how are you' in processed:
         return 'I am good'
-
-    return "i don't understand"
 
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -128,6 +132,7 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler('insult', insult_command))
     app.add_handler(CommandHandler('facts', uselessFacts_command))
     app.add_handler(CommandHandler('motivate', motivation_command))
+    app.add_handler(CommandHandler('pickup', pickup_command))
 
     # Messages
     app.add_handler(MessageHandler(filters.TEXT, handle_message))
