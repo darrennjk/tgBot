@@ -35,9 +35,7 @@ with open("mquotes/quotes.json", encoding="utf-8") as f:
 
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        "Hello waddup B-)", reply_markup=ReplyKeyboardRemove()
-    )
+    await update.message.reply_text("Hello waddup B-)")
 
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -52,7 +50,7 @@ async def compliment_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
     response = requests.get("https://complimentr.com/api")
     if response.status_code == 200:
         compliment = response.json()["compliment"]
-        await update.message.reply_text(compliment)
+        await update.message.reply_text(compliment, reply_markup=ReplyKeyboardRemove())
 
     else:
         await update.message.reply_text("Sorry can't think of any right now :)")
