@@ -1246,3 +1246,4 @@ telegram/__pycache__
 .venv
 venv/
 tgbotenv/
+.vscode/settings.json
